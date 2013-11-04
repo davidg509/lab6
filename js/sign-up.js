@@ -7,12 +7,12 @@ $(function(){
    	var state;
  
    for(idx = 0; idx < usStates.length; ++idx) {
-    state = usStates[idx];
-    var option = $(document.createElement('option'));
-    option.attr('value', state.abbreviation);
-    option.html(state.name);
-    stateSelect.append(option);
-   }
+	    state = usStates[idx];
+	    var option = $(document.createElement('option'));
+	    option.attr('value', state.abbreviation);
+	    option.html(state.name);
+	    stateSelect.append(option);
+    }
 
    $('.signup-form').submit(function(){
 	    //code to execute when the sign-up form is submitted
@@ -34,4 +34,11 @@ $(function(){
 	 	}
 	});
 
+    $('.cancel-signup').click(function(){
+	    $('.cancel-signup-modal').modal();
+	})
+
+   	$('.btn-abandon').click(function(){
+   	 	window.location = 'http://www.google.com';
+	});
 });
